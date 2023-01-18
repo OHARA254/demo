@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block contents %}
+<img src="data:image/png;base64,{{ chart | safe }}">
+{% endblock %}

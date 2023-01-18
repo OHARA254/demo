@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block contents %}
+<div class=matu>
+<h1>一週間分の予約情報</h1>
+{% for bikou in Custom %}
+{% if bikou.remarks == kijun %}
+<div class="group">
+<h5 class="font-weight-bold">{{bikou.zaseki}}</h5>
+<p>{{bikou.start}}~{{bikou.end}}</p><p>{{bikou.remarks}}</p><p>{{bikou.customer}}様</p>
+</div>
+{% else %}
+<div class="aaa">
+<h5 class="font-weight-bold">{{bikou.zaseki}}</h5>
+<p>{{bikou.start}}~{{bikou.end}}</p><p>{{bikou.remarks}}</p><p>{{bikou.customer}}様</p>
+</div>
+{% endif %}
+
+{% endfor %}
+</div>
+{% endblock %}
