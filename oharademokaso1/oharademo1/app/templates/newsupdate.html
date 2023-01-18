@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+ 
+{% load widget_tweaks %} 
+ 
+{% block contents %}
+<div class="matu">
+    <h1>お知らせ更新</h1>
+    <form method="post">
+      {% csrf_token %}
+    <div>
+        <p>日付{{ today }}</p>
+      </div>
+    <div>
+        <p>入力内容</p>
+        {% render_field form.news class="form-control" %}
+    </div>
+      <button class="button buttonBlue" type="submit">登録</button>
+    </form>
+</div>
+{% endblock %}
