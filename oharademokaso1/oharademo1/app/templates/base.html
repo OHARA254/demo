@@ -30,7 +30,7 @@
                             <ul class="main-nav">
 
                                 {% if user.is_authenticated %}
-                                <li><a href="{% url 'app:zaseki' %}">予約</a></li>
+                                <li><a href="{% url 'app:zaseki' %}">予約へ</a></li>
                                 <li><a href="{% url 'app:mypage' %}">マイページ</a></li>
                                 <li><a href="{% url 'account_logout' %}">ログアウト</a></li>
                                 {% else %}
